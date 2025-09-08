@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
         }
+        /* Menu */
         
         .menu {
             background: blue;
@@ -36,6 +37,7 @@
             font-weight: bold;
             font-size: 18px;
         }
+        /* Container grid */
         
         .container {
             display: grid;
@@ -45,31 +47,32 @@
             background: #1e90ff;
             color: white;
         }
+        /* Form */
         
-        .form-section,
-        .image-section {
+        .form-section {
             background: #cce0f5;
             padding: 15px;
             border: 1px solid #999;
             color: black;
         }
         
-        form iput,
+        form input,
         form textarea,
         form select {
-            width: 70%;
-            margin: 5px 0;
-            padding: 5px;
+            width: 90%;
+            margin: 6px 0;
+            padding: 6px;
             border: 1px solid gray;
+            border-radius: 4px;
         }
         
         form input[type="submit"],
-        form input[type='reset'] {
+        form input[type="reset"] {
             width: auto;
-            margin: #004080;
+            background: #004080;
             color: white;
             border: none;
-            padding: 6px 12px;
+            padding: 6px 14px;
             cursor: pointer;
         }
         
@@ -80,22 +83,43 @@
         
         h2 {
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: black;
         }
         
         h3 {
-            font-size: 12px;
-            margin-bottom: 10px;
+            font-size: 13px;
+            margin-bottom: 15px;
+            color: black;
+            font-weight: normal;
+        }
+        /* Image + slogan */
+        
+        .image-section {
+            background: #cce0f5;
+            padding: 15px;
+            border: 1px solid #999;
+            text-align: center;
             color: black;
         }
         
-        .slogan {
-            font-size: 16px;
-            font-weight: bold;
-            color: blue;
-            margin-top: 10px;
+        .image-section img {
+            max-width: 100%;
+            border-radius: 6px;
         }
+        
+        .slogan {
+            font-size: 18px;
+            font-weight: bold;
+            color: darkblue;
+            margin-top: 15px;
+        }
+        
+        .sub-slogan {
+            font-size: 14px;
+            color: navy;
+        }
+        /* Footer */
         
         .footer {
             background: #004080;
@@ -108,25 +132,54 @@
 </head>
 
 <body>
-    <div=<menu>
-        </menu>
+    <!-- Menu -->
+    <div class="menu">
         <a href="#">Home</a>
         <a href="#">Products</a>
         <a href="#">Services</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
         <div class="logo">Sky World</div>
+    </div>
+
+    <!-- Nội dung chính -->
+    <div class="container">
+        <!-- Form -->
+        <div class="form-section">
+            <h2>Registration information</h2>
+            <h3>
+                Start your travel planning right now with our on-line tour registration form. Just tell us a little about yourself and your group and one of our travel experts will contact you to create the perfect tour package custom built for your group's needs.
+            </h3>
+            <form>
+                Title:
+                <select>
+            <option>Mr.</option>
+          <option>Ms.</option>
+          <option>Mrs.</option>
+        </select><br> Full name:
+                <input type="text" placeholder="Full name"><br> Mailing Address:
+                <input type="text" placeholder="Mailing Address"><br> City:
+                <input type="text" placeholder="City"><br> Country:
+                <input type="text" placeholder="Country"><br> Specific question or requests: <br>
+                <textarea rows="4"></textarea><br>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
         </div>
-        <div class="container">
-            <div class="form-section">
-                <h2>Registration information</h2>
-                <h3>Start your travel planning right now with our on-line tour registration form. Just tell us a little about yourself and your group and one of our travel experts will contact you to create the perfect tour package custom built for your group's
-                    needs </h3>
-                <form>
-                    Title: <select><option>Mr.</option><option>Ms.</option></select><br> Full name: <input type="text" placeholder="Full name"><br> Mailing Address: <input type="text" placeholder="Mailing Address"><br> City: <input type="text" placeholder="Country"><br>                    Specific question or requests: <br>
-                    <textarea rows="4"></textarea><br>
-                    <input type="submit" value="Submit">
-                    <input type="reset" value="Reset">
-                </form>
-            </div>
-            <div>
+
+        <!-- Ảnh + slogan -->
+        <div class="image-section">
+            <img src="https://cdn2.fptshop.com.vn/unsafe/Uploads/images/tin-tuc/167993/Originals/hinh-nen-phong-canh-1.png" alt="Sky image">
+            <div class="slogan">You've arrived.</div>
+            <div class="sub-slogan">Journeys as great as the destinations.</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        ©2016 Sky World Tours. All rights reserved. <br> Contact information: <em>Student Name | Student ID</em> | Testing date: <em>16 Sept 2016</em>
+    </div>
+</body>
+
+</html>
